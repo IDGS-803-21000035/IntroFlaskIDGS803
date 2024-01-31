@@ -2,18 +2,16 @@
 
 
 {% block content %}
-#importamos 
+importamos 
 
-{% macro "_macro.html" as macro %}
+{%import "_macros.html" as macros%}
     <form action="">
-        <input type="text" name="nombre"  >
-        {{macro.render_input('Apaterno', 'Apaterno')}}
+        <input type="text" name="nombre" placeholder="nombre">
+        {{macros.render_input('Apaterno', 'Apaterno')}}
         
-        {{macro.render_input('Correo', 'Correo', 'email')}}
+        {{macros.render_input('Correo', 'Correo', 'email')}}
         
     </form>
-{% endmacro %}
-
 
 {% endblock %}
 
